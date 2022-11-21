@@ -184,8 +184,7 @@ def Make_Password(list):
 
 
 #main
-if "-" in sys.argv:
-    if(sys.argv == "-h"):
-        print("Usage python3 main.py [filename]")
+if "-h" in sys.argv:
+    print("Usage python3 main.py [filename]")
 else:
     Make_Password(Info_Gathering())
