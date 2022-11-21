@@ -169,18 +169,7 @@ def Make_Password(list):
                         file.write("\n")
                         linesWritten += 1
 
-
-
-
-
     print(f"Wrote {linesWritten} to {fileName}")
-
-
-
-
-
-
-
 
 
 #main
