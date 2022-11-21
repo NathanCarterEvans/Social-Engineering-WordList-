@@ -123,6 +123,51 @@ def Make_Password(list):
 
 
         #Capital First letter only
+        for i in range(len(list)):
+            for j in range(len(list[i])):
+                try:
+                    temp = list[i][j]
+                    list[i][j] = temp[0].upper()
+                    list[i][j] += temp[1:].lower()
+                except IndexError:
+                    pass
+
+        #write all to a list
+        for i in list:
+            for j in i:
+                file.write(j+"\n")
+                linesWritten += 1
+        #switch common chars
+        for i in list:
+            for j in i:
+                for l in j:
+                    if l.lower() in letterList:
+                        file.write(letterMap[letterList.index(l.lower())])
+                    else:
+                        file.write(l)
+                file.write("\n")
+                linesWritten += 1
+        #Permutations
+        for i in list:
+            for j in i:
+                for k in list:
+                    for l in k:
+                        file.write(j+l+"\n")
+                        linesWritten += 1
+        #permutations plus common chars
+        neword = ""
+        for i in list:
+            for j in i:
+                for k in list:
+                    for l in k:
+                        newword = j+l
+                        for letter in newword:
+                            if letter.lower() in letterList:
+                                file.write(letterMap[letterList.index(letter.lower())])
+                            else:
+                                file.write(letter)
+                        file.write("\n")
+                        linesWritten += 1
 
 
 
