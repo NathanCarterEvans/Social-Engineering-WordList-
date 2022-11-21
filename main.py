@@ -2,15 +2,15 @@ import sys
 def Info_Gathering():
     printlist = ["First name:","middle name","Last name:","Childs name","SO first name","SO middle name","SO last name","Important Dates MMDDYYYY(no spaces)","Important numbers"]
     setlist = [
-        ["nathan"],#First name:0
-        ["christopher"],#Middle name:1
-        ["carter"],#Last name:2
-        ["charlet"],#Childs name:3
-        ["daria"],#SO first name:4
-        [],#SO middle name:5
-        ["gramotieieva"],#SO last name:6
-        ["250122"],#Important dates:7
-        ["15","1353"] #Important Numbers:8
+        ["john"],#First name:0
+        ["Middle"],#Middle name:1
+        ["doe"],#Last name:2
+        ["child"],#Childs name:3
+        ["jane"],#SO first name:4
+        ["middle"],#SO middle name:5
+        ["doe"],#SO last name:6
+        ["01012222"],#Important dates:7
+        ["10","1010"] #Important Numbers:8
     ]
 
     setting = 0
@@ -123,7 +123,7 @@ def Make_Password(list):
 
 
         #Capital First letter only
-        
+
 
 
 
