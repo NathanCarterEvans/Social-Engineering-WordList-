@@ -33,6 +33,37 @@ def Make_Password(list):
     letterMap = ["@","1","1","0","$"]
     linesWritten = 0
 
+    #Make names
+    firstName = ""
+    middleName = ""
+    lastnName = ""
+    SOfirstName = ""
+    SOmiddleName = ""
+    SOlastName = ""
+    yyDate = []
+
+    if(len(list[0]) != 0 ):
+        firstName = list[0][0]
+    if(len(list[1]) != 0):
+        middleName = list[1][0]
+    if(len(list[2]) != 0):
+        lastName = list[2][0]
+    if(len(list[4]) != 0):
+        SOfirstName = list[4][0]
+    if(len(list[5]) != 0):
+        SOmiddleName = list[5][0]
+    if(len(list[6]) != 0):
+        SOlastName = list[6][0]
+    
+    if(len(list[7]) != 0):
+        for i in list[7]:
+            yyDate.append(i[-2:])
+
+
+    firstLetter = [firstName[0],middleName[0],lastName[0],SOfirstName[0],SOmiddleName[0],SOlastName[0]]
+    list.append(firstLetter)
+    list.append(yyDate)
+
     try:
         fileName = sys.argv[1]
         if ".txt" not in fileName:
@@ -168,6 +199,16 @@ def Make_Password(list):
                                 file.write(letter)
                         file.write("\n")
                         linesWritten += 1
+
+        
+
+        #-----------------------------#
+        
+
+        
+        
+
+
 
     print(f"Wrote {linesWritten} to {fileName}")
 
