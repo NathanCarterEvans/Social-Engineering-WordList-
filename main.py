@@ -29,8 +29,8 @@ def Info_Gathering():
 
 def Make_Password(list):
     #run through lists with words
-    letterList = ["a","i","l","o","s"]
-    letterMap = ["@","1","1","0","$"]
+    letterList = ["a","e","i","l","o","s"]
+    letterMap = ["@","3","1","1","0","$"]
     linesWritten = 0
 
     #Make names
