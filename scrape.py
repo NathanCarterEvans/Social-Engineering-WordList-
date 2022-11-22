@@ -7,6 +7,16 @@ education = []
 dates = []
 
 '''
+TODO
+scrape:
+intagram
+twitter
+tiktok
+
+'''
+
+
+'''
     --help      -h: display this help message
     --facebook  -f: facebook {-f [profilename]}
 
