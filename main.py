@@ -9,8 +9,8 @@ def Info_Gathering():
         ["jane"],#SO first name:4
         ["middle"],#SO middle name:5
         ["doe"],#SO last name:6
-        ["01012222"],#Important dates:7
-        ["10","1010"] #Important Numbers:8
+        ["01012022","02012022"],#Important dates:7
+        ["10","1515"] #Important Numbers:8
     ]
 
     setting = 0
@@ -36,31 +36,43 @@ def Make_Password(list):
     #Make names
     firstName = ""
     middleName = ""
-    lastnName = ""
+    lastName = ""
     SOfirstName = ""
     SOmiddleName = ""
     SOlastName = ""
     yyDate = []
 
+    firstLetter = []
+
     if(len(list[0]) != 0 ):
         firstName = list[0][0]
+        firstLetter.append(firstName[0])
+
     if(len(list[1]) != 0):
         middleName = list[1][0]
+        firstLetter.append(middleName[0])
+
     if(len(list[2]) != 0):
         lastName = list[2][0]
+        firstLetter.append(lastName[0])
+
     if(len(list[4]) != 0):
         SOfirstName = list[4][0]
+        firstLetter.append(SOfirstName[0])
+
     if(len(list[5]) != 0):
         SOmiddleName = list[5][0]
+        firstLetter.append(SOmiddleName[0])
+
     if(len(list[6]) != 0):
         SOlastName = list[6][0]
+        firstLetter.append(SOlastName[0])
     
     if(len(list[7]) != 0):
         for i in list[7]:
             yyDate.append(i[-2:])
 
 
-    firstLetter = [firstName[0],middleName[0],lastName[0],SOfirstName[0],SOmiddleName[0],SOlastName[0]]
     list.append(firstLetter)
     list.append(yyDate)
 
@@ -210,24 +222,47 @@ def Make_Password(list):
                     for b in a:
                         for x in list:
                             for y in x:
+                                #all lower
                                 word = j+b+y
                                 file.write(word.lower()+"\n")
+                                #switch chars
                                 for letter in word:
                                     if letter in letterList:
                                         file.write(letterMap[letterList.index(letter.lower())])
                                     else:
                                         file.write(letter)
+                                file.write("\n")
+                                #all upper
                                 file.write(word.upper()+"\n")
-                                # for letter in range(len(word)):
-                                #     if(letter == 0):
-                                #         file.write()
-
-        
-
-        
-        
-
-
+                                #Caps first letter
+                                for o in range(len(j)):
+                                    if(o == 0):
+                                        word1 = j[o].upper()
+                                    else:
+                                        word1 += j[o].lower()
+                                
+                                for o in range(len(b)):
+                                    if(o ==0):
+                                        word2 = b[o].upper()
+                                    else:
+                                        word2 += b[o].lower()
+                                
+                                for o in range(len(y)):
+                                    if(o ==0):
+                                        word3 = y[o].upper()
+                                    else:
+                                        word3 += y[o].lower()
+                                    
+                                word = (word1+word2+word3)
+                                file.write(word+"\n")
+                                #switch chars
+                                for letter in word:
+                                    if letter in letterList:
+                                        file.write(letterMap[letterList.index(letter.lower())])
+                                    else:
+                                        file.write(letter)
+                                file.write("\n")
+                                        
 
     print(f"Wrote {linesWritten} to {fileName}")
 
