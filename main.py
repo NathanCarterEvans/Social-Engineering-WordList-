@@ -202,7 +202,26 @@ def Make_Password(list):
 
         
 
-        #-----------------------------#
+        #----------------------------- TODO 3 itterations
+        word = ""
+        for i in list:
+            for j in i:
+                for a in list:
+                    for b in a:
+                        for x in list:
+                            for y in x:
+                                word = j+b+y
+                                file.write(word.lower()+"\n")
+                                for letter in word:
+                                    if letter in letterList:
+                                        file.write(letterMap[letterList.index(letter.lower())])
+                                    else:
+                                        file.write(letter)
+                                file.write(word.upper()+"\n")
+                                # for letter in range(len(word)):
+                                #     if(letter == 0):
+                                #         file.write()
+
         
 
         
