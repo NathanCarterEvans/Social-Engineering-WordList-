@@ -234,6 +234,9 @@ def Make_Password(list):
                         for x in list:
                             for y in x:#word3
                                 #all lower
+                                word1 = j
+                                word2 = b
+                                word3 = y
                                 word = j+b+y
                                 file.write(word.lower()+"\n")
                                 #switch chars
@@ -251,12 +254,19 @@ def Make_Password(list):
                                         word1 = j[o].upper()
                                     else:
                                         word1 += j[o].lower()
+
+
+                                word = (word1+word2+word3)
+                                file.write(word+"\n")
                                 
                                 for o in range(len(b)):
                                     if(o ==0):
                                         word2 = b[o].upper()
                                     else:
                                         word2 += b[o].lower()
+
+                                word = (word1+word2+word3)
+                                file.write(word+"\n")
                                 
                                 for o in range(len(y)):
                                     if(o ==0):
