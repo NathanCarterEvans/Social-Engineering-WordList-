@@ -1,16 +1,27 @@
 import sys
 def Info_Gathering():
     printlist = ["First name:","middle name","Last name:","Childs name","SO first name","SO middle name","SO last name","Important Dates MMDDYYYY(no spaces)","Important numbers"]
+    # setlist = [
+    #     ["john"],#First name:0
+    #     ["Middle"],#Middle name:1
+    #     ["doe"],#Last name:2
+    #     ["child"],#Childs name:3
+    #     ["jane"],#SO first name:4
+    #     ["middle"],#SO middle name:5
+    #     ["doe"],#SO last name:6
+    #     ["01012022","02012022"],#Important dates:7
+    #     ["10","1515"] #Important Numbers:8
+    # ]
     setlist = [
-        ["john"],#First name:0
-        ["Middle"],#Middle name:1
-        ["doe"],#Last name:2
-        ["child"],#Childs name:3
-        ["jane"],#SO first name:4
-        ["middle"],#SO middle name:5
-        ["doe"],#SO last name:6
-        ["01012022","02012022"],#Important dates:7
-        ["10","1515"] #Important Numbers:8
+        [],#First name:0
+        [],#Middle name:1
+        [],#Last name:2
+        [],#Childs name:3
+        [],#SO first name:4
+        [],#SO middle name:5
+        [],#SO last name:6
+        [],#Important dates:7
+        [] #Important Numbers:8
     ]
 
     setting = 0
@@ -217,11 +228,11 @@ def Make_Password(list):
         #----------------------------- TODO 3 itterations
         word = ""
         for i in list:
-            for j in i:
+            for j in i:#word1
                 for a in list:
-                    for b in a:
+                    for b in a:#word2
                         for x in list:
-                            for y in x:
+                            for y in x:#word3
                                 #all lower
                                 word = j+b+y
                                 file.write(word.lower()+"\n")
