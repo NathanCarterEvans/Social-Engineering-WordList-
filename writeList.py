@@ -290,6 +290,6 @@ def Make_Password(list):
 
 #main
 if "-h" in sys.argv:
-    print("Usage python3 main.py [filename]")
+    print("Usage python3 writeList.py [filename]")
 else:
     Make_Password(Info_Gathering())
